@@ -1,0 +1,435 @@
+:root {
+  --cor-fundo-escuro: #18110B;
+  --cor-fundo-claro: #FAF6F0;
+  --cor-fundo-card: #FFFFFF;
+  --cor-texto-principal: #2B2118;
+  --cor-texto-suave: #62564C;
+  --cor-texto-claro: #E2D9D0;
+  --cor-laranja: #E58B43;
+  --cor-laranja-hover: #D97734;
+  --cor-botao-escuro: #2B2118;
+  --cor-borda-suave: #EAE3D9;
+  --fonte-titulo: 'Lora', serif;
+  --fonte-corpo: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  /*Altera a margem */
+  padding: 0;
+  /*Altera o preenchimento */
+  box-sizing: border-box;
+  /* Trava os pixels da tela */
+
+}
+
+html {
+  scroll-behavior: smooth;
+  /*adiciona rolagem suave */
+  scroll-padding-top: 30px;
+  /* Adiciona um espaçamento no conteudo interno da rolagem */
+}
+
+section {
+  scroll-margin-top: 30px;
+  /* Adiciona um espaçamento no conteúdo da rolagem */
+}
+
+body {
+  font-family: var(--fonte-corpo);
+  /*Muda a fonte do documento*/
+  background-color: var(--cor-fundo-claro);
+  /*Muda a cor de fundo do documento*/
+  color: var(--cor-texto-principal);
+  /*Muda a cor do texto do documento*/
+  line-height: 1.6;
+  /*Aumenta o espaçamento entre as linhas do texto*/
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fonte-titulo);
+  /*Muda a fonte dos titulos*/
+}
+
+.cabecalho {
+  background-color: var(--cor-fundo-escuro);
+  /*Muda a cor de fundo do cabeçalho*/
+  padding: 20px;
+  /*Altera o preenchimento do cabeçalho*/
+  display: flex;
+  /*Altera o layout do cabeçalho, posicionando os elementos lado a lado */
+  justify-content: space-between;
+  /*Altera o espaçamento entre os elementos do cabeçalho*/
+  align-items: center;
+  /*Altera o alinhamento dos elementos do cabeçalho*/
+  position: sticky;
+  /*Mantém o cabeçalho fixo no topo da página*/
+  top: 0;
+  /*Mantém o cabeçalho fixo no topo da página*/
+  z-index: 1000;
+  /*Mantém o cabeçalho acima dos outros elementos da página*/
+}
+
+.logo {
+  font-family: var(--fonte-titulo);
+  /*Muda a fonte do logo*/
+  font-size: 22px;
+  /*Altera o tamanho da fonte do logo*/
+  font-weight: 700;
+  /*Altera o peso da fonte do logo*/
+  color: var(--cor-fundo-claro);
+  /*Muda a cor do logo*/
+  text-decoration: none;
+  /*Remove o sublinhado do logo*/
+}
+
+.logo i {
+  color: var(--cor-laranja);
+  /*Muda a cor do ícone do logo*/
+  margin-left: 8px;
+  /*Adiciona um espaçamento entre o ícone e o texto do logo*/
+
+}
+
+.navegacao {
+  display: flex;
+  /*Altera o layout da navegação, posicionando os elementos lado a lado */
+  gap: 32px;
+  /*Adiciona um espaçamento entre os elementos da navegação*/
+}
+
+.navegacao a {
+  color: var(--cor-fundo-claro);
+  /*Muda a cor dos links da navegação*/
+  text-decoration: none;
+  /*Remove o sublinhado dos links da navegação*/
+  font-size: 15px;
+  /*Altera o tamanho da fonte dos links da navegação*/
+  font-weight: 500;
+  /*Altera o peso da fonte dos links da navegação*/
+  padding-bottom: 4px;
+  /*Adiciona um espaçamento entre o texto e a borda inferior dos links da navegação*/
+
+}
+
+.navegacao a:hover,
+.navegacao a.active {
+  color: var(--cor-fundo-card);
+  /*Muda a cor dos links da navegação ao passar o mouse ou quando estiver ativo*/
+  border-bottom: 2px solid var(--cor-laranja);
+  /*Adiciona uma borda inferior aos links da navegação ao passar o mouse ou quando estiver ativo*/
+}
+
+.destaque {
+  background-color: var(--cor-fundo-escuro);
+  /*Muda a cor de fundo da seção de destaque*/
+  background-image: linear-gradient(90deg, rgba(0, 0, 0,0.50), rgba(255, 255, 255, 0.15)), url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  /*Adiciona uma imagem de fundo à seção de destaque*/
+  background-position: center right;
+  /*Altera a posição da imagem de fundo da seção de destaque*/
+  min-height: 440px;
+  /*Altera a altura mínima da seção de destaque*/
+  background-size: cover;
+  /*Altera o tamanho da imagem de fundo da seção de destaque*/
+  display: flex;
+  /*Altera o layout da seção de destaque, posicionando os elementos lado a lado */
+  flex-direction: column;
+  /*Altera a direção dos elementos da seção de destaque para coluna*/
+  justify-content: center;
+  /*Altera o alinhamento dos elementos da seção de destaque para o centro*/
+  align-items: flex-start;
+  /*Altera o alinhamento dos elementos da seção de destaque para o início*/
+  padding: 64px 8%;
+  /*Altera o preenchimento da seção de destaque*/
+
+
+}
+
+.destaque h1 {
+  font-size: 40px;
+  /*Altera o tamanho da fonte do título da seção de destaque*/
+  color: var(--cor-fundo-card);
+  /*Muda a cor do título da seção de destaque*/
+  margin-bottom: 13px;
+  /*Altera o espaçamento inferior do título da seção de destaque*/
+  max-width: 580px;
+  /*Altera a largura máxima do título da seção de destaque*/
+}
+
+.destaque h1 .destaque-texto {
+  color: var(--cor-laranja)
+  /*altera a cor do "Desenvolvedor" pra laranja*/
+}
+
+.frase-efeito {
+  font-size: 10px;
+  /*altera a fonte da frase de efeito*/
+  color: var(--cor-texto-claro);
+  font-style: italic;
+  /*altera sua fonte*/
+  margin-bottom: 32px;
+  /*altera o espaçamento da frase de efeito*/
+}
+
+.botao {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 20px;
+  /*altera os cantos do botão, deixando arrendondado*/
+  font-family: var(--fonte-corpo);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.botao-primario {
+  background-color: var(--cor-laranja);
+  color: var(--cor-botao-escuro);
+
+}
+
+.botao-primario:hover {
+  background-color: var(--cor-laranja-hover);
+
+}
+
+.botao-secundario {
+  background-color: var(--cor-botao-escuro);
+  color: var(--cor-fundo-card);
+}
+
+.titulo-secao {
+  font-size: 35px;
+  color: var(--cor-fundo-escuro);
+  text-align: center;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.titulo-secao.texto-esquerda {
+  text-align: center;
+}
+
+.favoritos {
+  display: flex;
+  padding: 54px 8%;
+  flex-wrap: wrap;
+  /*Quebra Linhas*/
+  gap: 29px;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  min-width: 300px;
+  background-color: var(--cor-fundo-card);
+  border-radius: 12px;
+  border: 1px solid var(--cor-borda-suave);
+  flex: 1;
+  overflow: hidden;
+}
+
+.card img {
+  width: 130px;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+.card-conteudo {
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-conteudo h3 {
+  font-size: 20px;
+  color: var(--cor-fundo-escuro);
+  margin-bottom: 60px;
+}
+
+.card-conteudo p {
+  font-size: 14px;
+  color: var(--cor-texto-suave);
+  margin-bottom: 13px;
+}
+
+.card-conteudo .preco {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--cor-laranja-hover);
+
+}
+
+.sobre {
+  padding: 64px 8%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 56px;
+  align-items: center;
+}
+
+.sobre-info {
+  flex: 1;
+  min-height: 280px;
+}
+
+.sobre-info p {
+  color: var(--cor-texto-principal);
+  font-size: 16px;
+  margin-right: 19px 29px;
+}
+
+.sobre-imagem {
+  flex: 1;
+  min-width: 300px;
+}
+
+.sobre-imagem img {
+  width: 100%;
+  height: 300px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.contato {
+  padding: 64px 8%;
+  background-color: var(--cor-texto-suave);
+
+}
+
+.contato-subtitulo {
+  text-align: center;
+  color: var(--cor-texto-suave);
+  margin-top: -29px;
+  margin-bottom: 40px;
+  font-size: 15px;
+}
+
+.formulario-contato {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: var(--cor-fundo-card);
+  padding: 40px;
+  border-radius: 16px;
+  border: 1px solid var(--cor-borda-suave);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.formulario-contato label {
+  font-size: 14px;
+  font-weight: 600;
+
+}
+
+.formulario-contato input,
+.formulario-contato textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--cor-borda-suave);
+  border-radius: 8px;
+  font-size: 15px;
+  color: var(--cor-texto-principal);
+  margin-bottom: 8px;
+}
+
+.formulario-contato input:focus,
+.formulario-contato textarea:focus {
+  outline: none;
+  border-color: var(--cor-laranja);
+  background-color: var(--cor-borda-suave);
+}
+
+.botao-enviar {
+  margin-top: 12px;
+  padding: 14px;
+}
+
+.rodape {
+  background-color: var(--cor-fundo-escuro);
+  color: var(--cor-texto-claro);
+  padding: 40px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.rodape-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-size: 14px;
+
+}
+
+.icone-rodape {
+  font-size: 19px;
+  color: var(--cor-laranja);
+}
+
+.rodape-item a {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--cor-fundo-card);
+}
+
+.rodape-item a:hover {
+  color: var(--cor-laranja-hover);
+}
+
+.direitos {
+  margin-right: 4px;
+}
+
+.direitos i {
+  margin-right: 4px;
+}
+
+@media (max-width: 768px) {
+  .cabecalho {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 5%;
+  }
+
+  .navegacao {
+    gap: 16px;
+  }
+
+  .destaque {
+    padding: 48px 5%;
+  }
+
+  .destaque h1 {
+    font-size: 35px;
+  }
+
+  .favoritos,
+  .sobre,
+  .contato {
+    padding: 48px 5%;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .card img {width: 100%;
+  height: 170px;
+  }
+
+  .rodape {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
